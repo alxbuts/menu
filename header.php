@@ -12,6 +12,10 @@
 
     <?php wp_body_open(); ?>
 
+    <h1 class="text-3xl font-bold underline">
+    Hello world!
+  </h1>
+
     <header>
         <?php
         if (has_custom_logo()) {

@@ -5,6 +5,8 @@ function plain_theme_enqueue_woocommerce_ajax()
     if (class_exists('WooCommerce')) {
         wp_enqueue_script('wc-cart-fragments');
     }
+
+    wp_enqueue_style('main', get_stylesheet_directory_uri() . '/css/main.css');
 }
 add_action('wp_enqueue_scripts', 'plain_theme_enqueue_woocommerce_ajax');
 
