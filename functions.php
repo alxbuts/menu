@@ -7,5 +7,7 @@ function plain_theme_setup() {
         'flex-height' => true,
         'flex-width'  => true,
     ));
+
+    add_theme_support('woocommerce');
 }
 add_action('after_setup_theme', 'plain_theme_setup');
