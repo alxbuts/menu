@@ -22,6 +22,14 @@
         }
         ?>
         <?php get_search_form() ?>
+        <div>
+        <?php 
+        $theme_uri = get_stylesheet_directory_uri();
+        if (get_page_by_path('user-profile')){
+            echo "<a href='/user-profile'><img src='$theme_uri/assets/user.svg'></a>";
+        }
+        ?>
+        </div>
     </header>
 
     <main>
