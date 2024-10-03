@@ -4,3 +4,6 @@ Author: alxbuts
 Text Domain: plain-theme
 */
 
+.blockUI.blockOverlay {
+    background-color: transparent !important;
+}

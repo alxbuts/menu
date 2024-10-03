@@ -28,13 +28,14 @@
             <?php
             $theme_uri = get_stylesheet_directory_uri();
             if (get_page_by_path('user-profile')) {
-                echo "<a href='/user-profile'><img src='$theme_uri/assets/user.svg'></a>";
+                echo "<a href='/user-profile'><img src='$theme_uri/assets/user.svg' alt='user'></a>";
             }
             ?>
             <?php if (function_exists('woocommerce_mini_cart')) : ?>
                 <div class="mini-cart-container">
                     <a href="<?php echo wc_get_cart_url(); ?>" class="cart-icon">
-                        <span class="cart-count"><?php echo WC()->cart->get_cart_contents_count(); ?></span>
+                        <?php echo "<img src='$theme_uri/assets/user.svg' alt='cart'>"; ?>
+                        <span class="cart-pricing"><?php echo WC()->cart->get_cart_total(); ?></span>
                     </a>
                     <div class="mini-cart-dropdown">
                         <?php woocommerce_mini_cart(); ?>
