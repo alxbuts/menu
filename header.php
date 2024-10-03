@@ -10,7 +10,7 @@
 
 <body <?php body_class(); ?>>
 
-<?php wp_body_open(); ?>
+    <?php wp_body_open(); ?>
 
     <header>
         <?php
@@ -43,4 +43,13 @@
                 </div>
             <?php endif; ?>
         </div>
+        <nav>
+            <?php
+            wp_nav_menu(array(
+                'theme_location' => 'primary',
+                'menu_class'     => 'primary-menu',
+                'container'      => false, // Set to 'nav' to wrap the menu in a <nav> tag.
+            ));
+            ?>
+        </nav>
     </header>
