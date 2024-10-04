@@ -2,3 +2,38 @@
 @tailwind components;
 @tailwind utilities;
 
+:root{
+    --primary-menu-width: 0px;
+    --products-menu-button-height: 0px;
+    --primary-menu-left: 0px;
+    --primary-menu-height: 0px;
+}
+.primary-menu{
+    width: fit-content;
+}
+.sub-menu{
+    display: none;
+    position: absolute;
+    top: 0;
+    left: var(--primary-menu-width);
+    width: calc(100% - var(--primary-menu-width) - var( --primary-menu-left));
+}
+
+li.menu-item:hover > .sub-menu{
+    display: block;
+}
+li.menu-item > .menu-item-image{
+    display: none;
+}
+li.menu-item:hover > .menu-item-image{
+    display: block;
+}
+li.menu-item:hover .submenu-icon{
+    filter: invert(1) brightness(2);
+}
+.primary-menu li:hover > a{
+    color: #fff;
+}
+.cart-pricing{
+    color: #fff;
+}

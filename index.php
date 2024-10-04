@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<main>
+<main class="container mx-auto py-4">
     <?php
     if (have_posts()) {
         while (have_posts()) {
@@ -16,7 +16,7 @@
     ?>
 </main>
 
-<footer>
+<footer class="container mx-auto py-4">
     <p>&copy; <?php echo date('Y'); ?> <?php bloginfo('name'); ?>. All rights reserved.</p>
 </footer>
 
